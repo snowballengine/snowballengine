@@ -1,5 +1,1 @@
-interface SnowballEngine {
-    addScene(name: string): unknown;
-}
-
-export type { SnowballEngine };
+export * from "./scene";

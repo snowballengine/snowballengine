@@ -1,0 +1,13 @@
+{
+    "name": "examples-project-template",
+    "type": "module",
+    "packageManager": "yarn@3.2.3",
+    "devDependencies": {
+        "tslib": "^2.4.0",
+        "typescript": "^4.7.4"
+    },
+    "dependencies": {
+        "@snowballengine/core": "workspace:packages/core",
+        "@snowballengine/utils": "workspace:packages/utils"
+    }
+}

@@ -32,6 +32,8 @@
         "noImplicitOverride": true,
         "noPropertyAccessFromIndexSignature": true,
 
+        "allowJs": false,
+
         "paths": {
             "@snowballengine/core": ["./packages/core/src/index.ts"],
             "@snowballengine/utils": ["./packages/utils/src/index.ts"]
