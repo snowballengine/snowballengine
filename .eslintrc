@@ -13,7 +13,6 @@
     "rules": {
         "curly": ["error", "all"],
 
-        "es/no-classes": ["error"],
         "es/no-keyword-properties": ["error"],
 
         "@typescript-eslint/no-non-null-assertion": ["off"]

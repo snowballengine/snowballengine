@@ -1,12 +1,18 @@
-import type { PickRequired, RequireKey } from "../types";
+import type { OptionalKeys, PickRequired, RequiredKeys, RequireKey } from "../types";
 
-type Builder<T extends object> = (<K extends keyof T, V extends Required<T>[K], R extends RequireKey<T, K>>(
+type Builder<T extends object> = (<
+    K extends OptionalKeys<T>,
+    V extends Required<T>[K],
+    R extends RequireKey<T, K>
+>(
     key: K,
     value: V
 ) => Builder<R>) &
     (() => T);
 
-export function builder<T extends object, U extends object>(obj: U): Builder<PickRequired<U> & Partial<T>>;
+export function builder<T extends object, U extends object>(
+    obj: U
+): Builder<PickRequired<U> & Partial<Omit<T, RequiredKeys<U>>>>;
 export function builder<T extends object>(obj: T): Builder<T>;
 export function builder<T extends object>(): Builder<Partial<T>>;
 export function builder<T extends object>(obj: T = Object.create(null) as T): Builder<T> {

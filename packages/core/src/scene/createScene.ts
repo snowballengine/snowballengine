@@ -16,9 +16,8 @@ export const createCreateScene: CreateCreateSceneType = (createTicker: CreateTic
     return (): Scene => {
         const ticker = createTicker();
 
-        return builder<Scene, Ticker>(ticker)("getTicker", () => ticker)("start", () => ticker.start())(
-            "stop",
-            () => ticker.stop()
+        return builder<Scene>()("getTicker", () => ticker)("start", () => ticker.start())("stop", () =>
+            ticker.stop()
         )();
     };
 };
