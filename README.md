@@ -1,0 +1,5 @@
+# snowballengine
+
+## Setup
+
+`yarn install`

@@ -1,0 +1,12 @@
+{
+    "extends": "../tsconfig.json",
+    "include": ["src"],
+    "compilerOptions": {
+        "noImplicitReturns": false
+    },
+    "references": [
+        { "path": "../packages/core" },
+        { "path": "../packages/modules" },
+        { "path": "../packages/utils" }
+    ]
+}

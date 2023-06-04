@@ -1,0 +1,23 @@
+{
+    "name": "@snowballengine/core",
+    "type": "module",
+    "packageManager": "yarn@3.3.1",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "test": "vitest run",
+        "typecheck": "tsc --noEmit",
+        "dev": "tsc -b --watch"
+    },
+    "devDependencies": {
+        "happy-dom": "^9.19.2",
+        "tslib": "^2.5.2",
+        "typescript": "^5.0.4",
+        "vite": "^4.3.8",
+        "vitest": "^0.31.1"
+    },
+    "dependencies": {
+        "@snowballengine/utils": "workspace:packages/utils"
+    }
+}

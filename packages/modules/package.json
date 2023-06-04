@@ -1,0 +1,25 @@
+{
+    "name": "@snowballengine/modules",
+    "type": "module",
+    "packageManager": "yarn@3.3.1",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "test": "vitest run",
+        "typecheck": "tsc --project tsconfig.json --noEmit",
+        "dev": "tsc -b --watch"
+    },
+    "devDependencies": {
+        "tslib": "^2.5.2",
+        "typescript": "^5.0.4",
+        "vite": "^4.3.8",
+        "vitest": "^0.31.1"
+    },
+    "dependencies": {
+        "@snowballengine/core": "workspace:packages/core",
+        "@snowballengine/utils": "workspace:packages/utils",
+        "reflect-metadata": "^0.1.13",
+        "tsyringe": "^4.7.0"
+    }
+}
